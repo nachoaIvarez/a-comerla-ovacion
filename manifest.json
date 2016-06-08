@@ -1,7 +1,7 @@
 {
     "name": "A Comerla Ovación",
     "description": "A comerla el coso ese para registrarte que te bloquea el contenido en Ovación, El País y TV Show.",
-    "version": "0.2",
+    "version": "0.3",
     "permissions": [
     "tabs","<all_urls>"
     ],

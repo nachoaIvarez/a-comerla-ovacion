@@ -1,12 +1,13 @@
-var overlays = document.querySelectorAll(".fancybox-overlay-fixed");
-var htmls = document.querySelectorAll("html");
+var overlay = null;
+var html = document.documentElement;
 
-for (var i = 0; i < overlays.length; i++) {
-  overlays[i].parentNode.removeChild(overlays[i]);
-}
-
-for (var j = 0; j < htmls.length; j++) {
-  htmls[j].classList.remove("fancybox-lock");
-}
+var interval = setInterval(function() {
+  overlay = document.querySelector(".fancybox-overlay-fixed");
+  if (overlay) {
+    overlay.remove();
+    html.classList.remove("fancybox-lock");
+    clearInterval(interval);
+  }
+}, 100);
 
 console.log("A COMERLA OVACIÓN!");
